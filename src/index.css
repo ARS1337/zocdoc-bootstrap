@@ -1,13 +1,167 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+*{
+  font-family: sharp-sans-medium, fallback-font, Arial, sans-serif;;
+}
+
+.mainContainer {
+  padding-left: 66px !important;
+  padding-right: 66px !important;
+  padding-top: 4px;
+}
+
+.headerImage {
+  background-image: url(https://d1uhlocgth3qyq.cloudfront.net/zocdoc-circle-logo___2_rl5.svg);
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  height: 56px;
+  width: 163px;
+}
+
+.header .rightSide a {
+  border-bottom: 1px dotted rgb(0, 35, 75);
+  color: rgb(0, 35, 75) !important;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.header .rightSide a:hover {
+  border-bottom: 1px solid rgb(0, 35, 75);
+}
+
+.header .rightSide .bar {
+  border-bottom: 0;
+}
+
+.MainHeaderText {
+  font-size: 72px;
+  line-height: 72px;
+  color: rgb(0, 35, 75);
+  font-weight: 700;
+}
+
+.responsiveHeaderText {
+  padding-top: 88px;
+}
+
+@keyframes removeText {
+  from {
+    transform: translateY(0px) ;
+    opacity: 100%;
+  }
+  to{
+    transform: translateY(-80px) ;
+    opacity: 00%;
+  }
+}
+
+@keyframes showText {
+  from {
+    transform: translateY(40px) ;
+    opacity: 00%;
+  }
+  to{
+    transform: translateY(00px) ;
+    opacity: 100%;
+  }
+}
+
+
+.removeText{
+  display: inline-block;
+  animation: removeText 0.3s 2.9s  forwards;
+}
+
+.showText{
+  display: inline-block;
+  animation: showText 0.3s 0s forwards;
+}
+
+.stayText{
+  display: inline-block;
+}
+
+.filterContainer{
+  border-color: rgb(206, 213, 221);
+  border-width: 1px;
+  border-style: solid;
+}
+.filterContainer .col{
+  display: flex;
+  align-items: baseline;
+}
+
+.SelectDropDown{
+  height:200px;
+  width:450px;
+  overflow-y: scroll;
+}
+.card{
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  min-width: 400px !important;
+  border-color:rgb(238, 240, 241)
+}
+.cardImage{
+  position: absolute;
+  top:-50px;
+  border-radius: 100%;
+}
+.cardTag{
+  text-align: right;
+  background-color: rgb(220, 233, 253);
+  padding:0.5rem;
+  border-radius: 20px;
+}
+.cardName{
+  font-weight: 700 !important;
+  color:rgb(0, 35, 75) !important;
+  font-size: 28px;
+  line-height: 28px;
+  padding-top: 1.5rem;
+}
+.cardType{
+  font-weight: 300;
+  font-size: 18px;
+  color:rgb(0, 35, 75) !important;
+  /* font:14px / 20px sharp-sans-medium, fallback-font, Arial, sans-serif; */
+}
+
+.cardLocation{
+  color:slategrey
+}
+
+.cardRating{
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.cardDesc{
+  padding-bottom: 1rem;
+}
+.cardRatingName{
+  color:rgb(0, 35, 75);
+  font-weight: 600;
+  margin-right:'8px'
+}
+.cardReviewName{
+  color:rgb(129, 133, 138);
+  margin-left:4px;
+}
+
+.filterContainer .col::after {
+ content: "|";
 }
